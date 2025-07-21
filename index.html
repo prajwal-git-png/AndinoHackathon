@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mars Rover Game</h1>
+        
+        <div class="game-layout">
+   
+            <div class="game-grid">
+        
+                <div id="plateau-grid"></div>
+
+            
+                <div class="info-box">
+                    <div class="info-title">Terrain Types</div>
+                    <div class="terrain-list">
+                        <div>Empty (Space)</div>
+                        <div>Rocky (🪨)</div>
+                        <div>Obstacle (⚠️)</div>
+                        <div>Charging (🔋)</div>
+                        <div>Anomaly (🔮)</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="game-controls">
+
+                <div class="info-box">
+                    <div class="info-title">Grid Settings</div>
+                    <div class="input-group">
+                        <div>Width: <input type="number" id="width" value="3" min="2" max="10"></div>
+                        <div>Height: <input type="number" id="height" value="3" min="2" max="10"></div>
+                        <div>Power: <input type="number" id="max-power" value="5" min="1"></div>
+                    </div>
+                </div>
+
+     
+                <div class="info-box">
+                    <div class="info-title">Commands</div>
+                    <div class="input-group">
+                        <input type="text" id="commands" value="MMRMM" placeholder="Enter commands (LRMP)">
+                        <div class="buttons">
+                            <button id="start">Start</button>
+                            <button id="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+        
+                <div class="info-box">
+                    <div class="info-title">Rover Status</div>
+                    <div class="status-group">
+                        <div>Position: <span id="position">0, 0</span></div>
+                        <div>Direction: <span id="direction">N</span></div>
+                        <div>Power: <span id="power">5</span></div>
+                        <div>Status: <span id="mission-status">Ready</span></div>
+                    </div>
+                </div>
+
+                
+                <div class="info-box">
+                    <div class="info-title">How to Play</div>
+                    <div class="instructions">
+                        <p>1. Set grid size and power</p>
+                        <p>2. Click cells to change terrain</p>
+                        <p>3. Use these commands:</p>
+                        <div class="command-help">
+                            M = Move Forward
+                            R = Turn Right
+                            L = Turn Left
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
